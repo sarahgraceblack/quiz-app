@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: url(img/bg.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Oswald", sans-serif;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+}
+.start {
+  text-align: center;
+  color: white;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz label {
+  display: block;
+}
+
+.quiz,
+.summary,
+.answerCorrect,
+.answerWrong {
+  display: none;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+fieldset {
+  border: none;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Leadership Quiz App</title>
+    <meta name="description" content="Find out if you were born to lead" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!--ON LOAD------------------------------------------------------------->
+    <header role="banner container">
+      <img class="logo" src="img/logo.png" alt="Up People International" />
+    </header>
+    <main role="main">
+      <div class="start">
+        <h1>Do you have what it takes to be a leader?</h1>
+        <p>
+          Take the quiz to find out!
+        </p>
+        <button type="button" class="startButton">Let's go!</button>
+      </div>
+      <!--QUESTIONS------------------------------------------------------------->
+      <div class="quiz container">
+        <h2 class="question">
+          Question
+        </h2>
+
+        <form class="quizForm">
+          <fieldset>
+            <div class="answers"></div>
+            <button type="submit" id="submitButton">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="feedback">
+        <div class="answerCorrect container">
+          <h2>Correct!</h2>
+          <button type="button" class="nextButton">Next</button>
+        </div>
+
+        <div class="answerWrong container">
+          <h2>Wrong!</h2>
+          <p>inject correct answer here</p>
+          <button type="button" class="nextButton">Next</button>
+        </div>
+      </div>
+      <!--RESULT------------------------------------------------------------->
+      <div class="summary container">
+        <p>You scored</p>
+        <button class="restartButton">Retake Quiz</button>
+      </div>
+      <!--COUNT/SCORE------------------------------------------------------------->
+      <div class="countScore container">
+        <div class="questionCount">
+          <p></p>
+        </div>
+        <div class="scoreCount">
+          <p></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
