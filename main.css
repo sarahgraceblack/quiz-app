@@ -96,7 +96,7 @@ fieldset {
 
 .answerCorrect,
 .answerWrong {
-  margin-top: 25px;
+  margin-top: 0px;
 }
 
 .startButton {
