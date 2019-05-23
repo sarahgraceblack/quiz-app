@@ -3,32 +3,6 @@ let score = 0;
 let currentQuestion = 0;
 let questions = [
   {
-    title: "All of the following are examples of excellent leadership skills except:",
-    answers: [
-      "Influencing other to do what the leader wants",
-      "Influencing others to achieve worthwhile goals",
-      "Bringing about positive changes",
-      "Attracting the support of others"],
-    correct: 0
-  },
-  {
-    title: "blue",
-    answers: ["red", "blue", "green", "yellow"],
-    correct: 1
-  },
-  {
-    title: "green",
-    answers: ["red", "blue", "green", "yellow"],
-    correct: 2
-  },
-  {
-    title: "yellow",
-    answers: ["red", "blue", "green", "yellow"],
-    correct: 3
-  }
-];
-/*          
-  {
     title:
       "All of the following are examples of excellent leadership skills except:",
     answers: [
@@ -49,11 +23,39 @@ let questions = [
       "Being so self-confident they believe they can handle anything"
     ],
     correct: 3
+  },
+  {
+    title:
+      "A manager who show consistency between his or her words and actions develops a reputation for:",
+    answers: [
+      "Self-confidence",
+      "Walking the talk",
+      "Emotional intelligence",
+      "High Energy"
+    ],
+    correct: 1
+  },
+  {
+    title:
+      "Strong motivation and high energy and characteristics of effective leaders. Successful leaders often works ________ hours per week.",
+    answers: ["40", "50", "60", "70+"],
+    correct: 1
+  },
+  {
+    title:
+      "All of the following are examples of problem solving and intellectual skills, are referred to as cognitive skills, except:",
+    answers: [
+      "Problem solving",
+      "Street smarts",
+      "Serious demeanor",
+      "Knowledge of the business"
+    ],
+    correct: 1
   }
 ];
-*/
 
 //event listeners
+
 $(document).ready(function() {
   $(".start button").click(function(e) {
     e.preventDefault();
@@ -63,10 +65,6 @@ $(document).ready(function() {
     scoreCount();
     questionCount();
   });
-
-  /*$(".quiz form").on("click", "radio", function() {
-    $(this).addClass("selected");
-  });*/
 
   //check answer and validation
   $(".quiz .quizForm").submit(function(e) {
@@ -98,7 +96,6 @@ $(document).ready(function() {
 //functions
 
 //loads radio btns
-
 function showQuestion() {
   if (currentQuestion >= questions.length) {
     showSummary();
@@ -115,34 +112,6 @@ function showQuestion() {
     }
   }
 }
-
-//loads li-s
-/*
-function showQuestion() {
-  let question = questions[currentQuestion];
-  $(".quiz h2").text(question.title);
-  $(".quiz ul").html("");
-  for (var i = 0; i < question.answers.length; i++) {
-    $(".quiz ul").append(`<li id="${i}">${question.answers[i]}</li>`);
-  }
-}
-*/
-
-/*
-//function without injecting feedback screens
-function checkAnswer(guess) {
-  let question = questions[currentQuestion];
-  if (question.correct === guess) {
-    score++;
-  }
-  currentQuestion++;
-  if (currentQuestion >= questions.length) {
-    showSummary();
-  } else {
-    showQuestion();
-  }
-}
-*/
 
 //function with injecting feedback screens
 function checkAnswer(guess) {
@@ -185,7 +154,11 @@ function showSummary() {
   $(".quiz").hide();
   $(".summary").show();
   $(".summary p").text(
-    "Congrats you scored " + score + " out of " + questions.length + " correct"
+    "You answered " +
+      score +
+      " out of " +
+      questions.length +
+      " questions correct"
   );
 }
 

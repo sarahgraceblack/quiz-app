@@ -2,63 +2,89 @@
 <html lang="en">
   <head>
     <title>Leadership Quiz App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Find out if you were born to lead" />
     <link
       href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <!--ON LOAD------------------------------------------------------------->
-    <header role="banner container">
+    <header role="banner">
       <img class="logo" src="img/logo.png" alt="Up People International" />
     </header>
     <main role="main">
-      <div class="start">
-        <h1>Do you have what it takes to be a leader?</h1>
-        <p>
-          Take the quiz to find out!
-        </p>
-        <button type="button" class="startButton">Let's go!</button>
-      </div>
-      <!--QUESTIONS------------------------------------------------------------->
-      <div class="quiz container">
-        <h2 class="question">
-          Question
-        </h2>
+      <div class="wrapper">
+        <div class="start">
+          <h1>Do you have what it takes to be a leader?</h1>
+          <p class="subHeaders">
+            Take the quiz to find out!
+          </p>
+          <button type="button" class="startButton">START</button>
+        </div>
+        <!--QUESTIONS------------------------------------------------------------->
+        <div class="quiz">
+          <h2 class="question">
+            Question
+          </h2>
 
-        <form class="quizForm">
-          <fieldset>
-            <div class="answers"></div>
-            <button type="submit" id="submitButton">Submit</button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="feedback">
-        <div class="answerCorrect container">
-          <h2>Correct!</h2>
-          <button type="button" class="nextButton">Next</button>
+          <form class="quizForm">
+            <fieldset>
+              <div class="answers"></div>
+              <div class="buttonWrap">
+                <button type="submit" id="submitButton" class="button">
+                  SUBMIT
+                </button>
+              </div>
+            </fieldset>
+          </form>
         </div>
+        <div class="feedback">
+          <div class="answerCorrect">
+            <span class="fas fa-check-circle"></span>
+            <h2>Correct!</h2>
+            <div class="buttonWrap">
+              <button type="button" class="button">NEXT</button>
+            </div>
+          </div>
 
-        <div class="answerWrong container">
-          <h2>Wrong!</h2>
-          <p>inject correct answer here</p>
-          <button type="button" class="nextButton">Next</button>
+          <div class="answerWrong">
+            <span class="fas fa-times-circle"></span>
+            <h2>Wrong!</h2>
+            <p>inject correct answer here</p>
+            <div class="buttonWrap">
+              <button type="button" class="button">NEXT</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <!--RESULT------------------------------------------------------------->
-      <div class="summary container">
-        <p>You scored</p>
-        <button class="restartButton">Retake Quiz</button>
-      </div>
-      <!--COUNT/SCORE------------------------------------------------------------->
-      <div class="countScore container">
-        <div class="questionCount">
+        <!--RESULT------------------------------------------------------------->
+        <div class="summary">
           <p></p>
+          <div class="buttonWrap">
+            <button class="startButton">Retake Quiz</button>
+          </div>
         </div>
-        <div class="scoreCount">
-          <p></p>
+        <!--COUNT/SCORE------------------------------------------------------------->
+        <div class="countScore">
+          <div class="questionCount">
+            <p></p>
+          </div>
+          <div class="scoreCount">
+            <p></p>
+          </div>
         </div>
       </div>
     </main>

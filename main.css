@@ -11,25 +11,45 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+main {
+  padding: 30px;
 }
 
 .logo {
   display: block;
-  margin: 0 auto;
+  margin: 30px auto 20px auto;
+  width: 240px;
 }
 
 h1 {
-  font-size: 50px;
-}
-.start {
-  text-align: center;
-  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 58px;
+  line-height: 1.2em;
 }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
+h2,
+.summary p {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  line-height: 1.3em;
+  margin-bottom: 35px;
+}
+
+.feedback h2 {
+  text-align: center;
+}
+
+.subHeaders {
+  font-size: 27px;
+  margin: 50px 0;
+}
+
+.start {
+  text-align: center;
 }
 
 .quiz label {
@@ -43,10 +63,194 @@ h1 {
   display: none;
 }
 
-.selected {
-  background-color: yellow;
-}
-
 fieldset {
   border: none;
+}
+
+.quizForm label {
+  margin-bottom: 20px;
+}
+.buttonWrap {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.summary,
+.countScore,
+.feedback {
+  text-align: center;
+}
+
+.answers span {
+  font-size: 16px;
+}
+
+.feedback p {
+  font-size: 24px;
+}
+
+.feedback h2 {
+  font-size: 40px;
+}
+
+.answerCorrect,
+.answerWrong {
+  margin-top: 50px;
+}
+
+.startButton {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #00ccc2),
+    color-stop(1, #1a837e)
+  );
+  background: -moz-linear-gradient(top, #00ccc2 5%, #34ada7 100%);
+  background: -webkit-linear-gradient(top, #00ccc2 5%, #34ada7 100%);
+  background: -o-linear-gradient(top, #00ccc2 5%, #34ada7 100%);
+  background: -ms-linear-gradient(top, #00ccc2 5%, #34ada7 100%);
+  background: linear-gradient(to bottom, #00ccc2 5%, #34ada7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ccc2', endColorstr='#34ada7',GradientType=0);
+  background-color: #00ccc2;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  padding: 12px 60px;
+  text-decoration: none;
+}
+.button:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #34ada7),
+    color-stop(1, #00ccc2)
+  );
+  background: -moz-linear-gradient(top, #34ada7 5%, #00ccc2 100%);
+  background: -webkit-linear-gradient(top, #34ada7 5%, #00ccc2 100%);
+  background: -o-linear-gradient(top, #34ada7 5%, #00ccc2 100%);
+  background: -ms-linear-gradient(top, #34ada7 5%, #00ccc2 100%);
+  background: linear-gradient(to bottom, #34ada7 5%, #00ccc2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#34ada7', endColorstr='#00ccc2',GradientType=0);
+  background-color: #34ada7;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+.button {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #00ccc2),
+    color-stop(1, #34ada7)
+  );
+  background: -moz-linear-gradient(top, #00ccc2 5%, #34ada7 100%);
+  background: -webkit-linear-gradient(top, #00ccc2 5%, #34ada7 100%);
+  background: -o-linear-gradient(top, #00ccc2 5%, #34ada7 100%);
+  background: -ms-linear-gradient(top, #00ccc2 5%, #34ada7 100%);
+  background: linear-gradient(to bottom, #00ccc2 5%, #34ada7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ccc2', endColorstr='#34ada7',GradientType=0);
+  background-color: #00ccc2;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  padding: 10px 34px;
+  text-decoration: none;
+}
+.button:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #1a837e),
+    color-stop(1, #00ccc2)
+  );
+  background: -moz-linear-gradient(top, #34ada7 5%, #00ccc2 100%);
+  background: -webkit-linear-gradient(top, #34ada7 5%, #00ccc2 100%);
+  background: -o-linear-gradient(top, #34ada7 5%, #00ccc2 100%);
+  background: -ms-linear-gradient(top, #34ada7 5%, #00ccc2 100%);
+  background: linear-gradient(to bottom, #34ada7 5%, #00ccc2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#34ada7', endColorstr='#00ccc2',GradientType=0);
+  background-color: #34ada7;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+span.fas.fa-check-circle,
+span.fas.fa-times-circle {
+  font-size: 60px;
+}
+
+/*tablet styles*/
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  h2.question,
+  .feedback h2 {
+    font-size: 36px;
+  }
+
+  .answers span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .logo {
+    margin-top: 100px;
+  }
+  .wrapper {
+    width: 650px;
+  }
+
+  .start,
+  .answerCorrect,
+  .answerWrong {
+    margin-top: 70px;
+  }
+
+  .answers span {
+    font-size: 20px;
+  }
+
+  .quiz {
+    background: rgba(101, 140, 189, 0.7);
+    padding: 30px 40px 0 40px;
+    border-radius: 20px;
+  }
+
+  .quizForm {
+    margin-bottom: 30px;
+  }
+
+  .quizForm span {
+    margin-left: 10px;
+  }
+
+  .feedback h2,
+  .summary p {
+    font-size: 52px;
+    margin-bottom: 30px;
+  }
 }
